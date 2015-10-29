@@ -1,12 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include "multi.h"
+#include "twosome_scanf.h"
 
 int main()
 {
-	int a = 1;
-	int b = 2;
-	int c = a+b;
+	int c=0;
+	int d=0;
+	int* a=&c;
+	int* b=&d;
+	int result;
+	twosome_scanf(a,b);
 
-	printf("a : %d\n",a);
-	printf("b : %d\n",b);
-	printf("a + b : %d\n", c);
+	result = multi(*a,*b);
+	printf("%d", result);
 }
